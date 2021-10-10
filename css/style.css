@@ -1,0 +1,233 @@
+/* importing google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;700&display=swap');
+
+/* global reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(to right, #ee9ca7, #ffdde1); */
+    background: linear-gradient(to right, #420868, #21084b, #070c53fa);
+    /* background: url(/img/freelancer-763730_1920.jpg) ; */
+
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    min-height: 100vh;
+    position: relative;
+}
+.todo-container{
+    text-align: center;
+    width: 500px !important;
+    height: auto;
+    border: 3px solid #555;
+    border-radius: 56px;
+    background: #2eacd6;
+    box-shadow: inset 24px -24px 52px #207794,
+            inset -24px 24px 52px #3ce1ff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 20%;
+    left: 10%;
+     margin: auto;
+    display: flex;
+    align-items: center;
+
+}
+header{
+    width: 650px;
+    box-shadow: 10px 9px 9px 1px rgba(56, 55, 55, 0.73) inset;
+    -webkit-box-shadow: 10px 9px 9px 1px rgba(0,0,0,0.73) inset;
+    -moz-box-shadow: 10px 9px 9px 1px rgba(0,0,0,0.73) inset;
+    border-radius: 30px;
+    background: #1c5788;
+    margin:15px auto;
+    
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 45px;
+    color: #2fdb4c;
+    text-align: center;
+    font-weight: 700;
+}
+.todo-info{
+    color: aliceblue;
+    background-color: rgb(169, 172, 32);
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    box-shadow: rgb(242, 243, 234) solid 3px 2px;
+    border: blanchedalmond solid 2px 3px;
+    display:block;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+form input,
+form button {
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    background: white;
+}
+
+form input:focus,
+form button:focus {
+    outline: none;
+}
+
+form button {
+    color: #6984b5;
+    cursor: pointer;
+    background: white;
+    transition: all 0.3s ease;
+    margin-left: 5px;
+}
+
+form button:hover {
+    color: white;
+    background: #6984b5;
+}
+
+
+.todo-list {
+    list-style: none;
+    min-width: 20%;
+    margin-top: 50px;
+}
+
+.todo {
+    padding: 10px;
+    background: white;
+    margin-bottom: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.todo-item {
+    margin-right: 8px;
+}
+
+.trash,
+.check {
+    background: rgb(14, 23, 102);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 1px rgba(130, 130, 140, 0.4);
+}
+.edit {
+    background: rgb(12, 96, 110);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 1px rgba(130, 130, 140, 0.4);
+}
+.save{
+    background: rgb(10, 13, 235);
+    color: rgb(238, 227, 227);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 1px rgba(130, 130, 140, 0.4);
+
+}
+
+.check {
+    background: rgb(31, 223, 143);
+}
+
+.trash:focus,
+.check:focus,
+.edit:focus,
+.save:focus {
+    outline: none;
+}
+
+.trash:hover {
+    background: rgb(255, 253, 250);
+    color: rgb(255, 127, 80);
+}
+.check:hover {
+    background: rgb(255, 253, 250);
+    color: rgb(31, 223, 143);
+}
+.edit:hover {
+    background: rgb(228, 221, 214);
+    color: rgb(12, 96, 110);
+    
+}
+.save:hover{
+    background: rgb(187, 149, 22);
+    color: rgb(10, 13, 235);
+
+}
+
+
+.fa-trash,
+.fa-check,.fa-edit,
+.fa-save {
+    pointer-events: none;
+}
+
+.bottom-text {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+.underline {
+    text-decoration: underline;
+    color: #1880eb;
+}
+
+.underline a:visited {
+    color: #1880eb;
+}
+
+/* css transition effect for completing task */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.9;
+    color: rgba(130, 130, 140, 0.4);
+}
+
+/* css transition effect for deleting task */
+.drop-effect {
+    transform: translateY(45px) rotateZ(20deg);
+    opacity: 0;
+}
